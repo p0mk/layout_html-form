@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <script type="text/javascript" src="./main.js"></script>
     <form
     action="http://localhost:8080/"
     method="post"
     autocomplete="off"
     >
-    
+
       <fieldset class="fieldset">
         <legend>Personal information</legend>
         <label class="form-field">
@@ -25,7 +26,11 @@
         </label>
         <label class="form-field">
           Name:
-          <input type="text" name="Name">
+          <input
+          type="text"
+          name="Name"
+          required
+          >
         </label>
 
         <label class="form-field">
@@ -69,29 +74,31 @@
 
       <fieldset class="fieldset">
         <legend>An interesting fact about you!</legend>
+        <label class="form-field">
           Do you love cats?
-        <label>
-          <input 
-          type="radio"
-          name="lovecats"
-          value="yes"
-          >
-          Yes
-        </label>
-        <label>
-          <input
-          type="radio"
-          name="lovecats"
-          value="no"
-          >
-          No
+          <label>
+            <input 
+            type="radio"
+            name="lovecats"
+            value="yes"
+            >
+            Yes
+          </label>
+            
+          <label>
+            <input
+            type="radio"
+            name="lovecats"
+            value="no"
+            >
+            No
+          </label>
         </label>
         <label class="form-field">
           What is your favorite color?
           <input
           type="color"
           name="color"
-          required
           >
         </label>
         <label class="form-field">
@@ -134,6 +141,5 @@
 
       <button type="submit" class="button">Submit</button>
     </form>
-    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
